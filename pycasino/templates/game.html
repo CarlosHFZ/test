@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block title %}Cassino - PyCasino{% endblock %}
+{% block body %}
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Bem-vindo, {{ session['user']['name'] }}</h2>
+  <div class="text-end mb-3">
+    Fichas: <span id="tokens">{{ session['user']['tokens'] }}</span>
+    <form action="{{ url_for('logout') }}" method="POST" class="d-inline">
+      <button class="btn btn-outline-secondary btn-sm" type="submit">Sair</button>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-header text-center">Slot Machine</div>
+        <div class="card-body text-center">
+          <div id="slots" class="display-5 mb-3">
+            <span id="slot1">0</span>
+            <span id="slot2">0</span>
+            <span id="slot3">0</span>
+          </div>
+          <button id="spin" class="btn btn-success">Girar</button>
+          <p id="slot-result" class="mt-3"></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 mb-4">
+      <div class="card h-100">
+        <div class="card-header text-center">Roleta</div>
+        <div class="card-body text-center">
+          <div class="mb-3">
+            <select id="guess" class="form-select w-50 d-inline">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <button id="roulette" class="btn btn-warning ms-2">Jogar</button>
+          </div>
+          <p id="roulette-result" class="mt-3"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script src="{{ url_for('static', filename='game.js') }}"></script>
+{% endblock %}
