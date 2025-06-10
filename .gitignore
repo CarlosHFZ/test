@@ -1,0 +1,4 @@
+node_modules
+casino/node_modules/
+
+__pycache__/
