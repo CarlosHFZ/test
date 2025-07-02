@@ -1,0 +1,48 @@
+/* src/components/ui/formFields.module.css */
+
+.form { display: grid; gap: 1rem; }
+.formGroup { margin-bottom: 1rem; } /* Esta classe já existe e é usada como wrapper */
+.label { display: block; margin-bottom: .25rem; color: #3d2c1e; }
+
+.input {
+  /* width: 100%; */ /* REMOVA ou COMENTE esta linha */
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Importante para padding/border não aumentarem a largura definida */
+}
+
+.error { color: #eb5757; font-size: .75rem; margin-top: .25rem; }
+
+/* Novas classes para controle de largura do input/select */
+.inputFullWidth {
+  width: 100%;
+}
+.inputWidthXSmall { /* Ex: CEP, Sigla curta */
+  width: 100px;
+}
+.inputWidthSmall { /* Ex: Número, Ano */
+  width: 150px;
+}
+.inputWidthMedium { /* Ex: Campos de texto médios */
+  width: 220px;
+}
+.inputWidthLarge { /* Ex: Campos de texto um pouco maiores */
+  width: 300px;
+}
+/* Adicione mais conforme necessário */
+
+
+.textarea {
+  display: block;
+  padding: .5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-family: inherit; /* Good practice for cross-browser consistency */
+  width: 40%; /* The textarea will occupy the full width of its container */
+
+  /* User Requirements */
+  resize: vertical;   /* This allows resizing ONLY vertically (para baixo) */
+  min-height: 100px;  /* This sets a fixed initial height */
+}

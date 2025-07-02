@@ -1,0 +1,6 @@
+/* src/components/UserForm.module.css */
+.form { display: grid; gap: 1rem; }
+.formGroup { margin-bottom: 1rem; }
+.label { display: block; margin-bottom: .25rem; color: #3d2c1e; }
+.input { width: 100%; padding: .5rem; border: 1px solid #ccc; border-radius: 4px; }
+.error { color: #eb5757; font-size: .75rem; margin-top: .25rem; }

@@ -1,0 +1,88 @@
+/* DraggableCreationPopup.module.css (versão corrigida) */
+
+.popupContainer {
+  position: fixed;
+  top: 150px;
+  left: calc(50% - 175px); /* Ajustado para o novo tamanho */
+  width: 350px; /* Um pouco mais compacto */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e2e8f0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  /* CORREÇÃO: Usa space-between para alinhar os itens nas extremidades */
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  cursor: grab; /* Melhora a UX, indicando que é arrastável */
+}
+.header h3 {
+  font-weight: 600;
+}
+.header > div { /* Div para agrupar o ícone de arrastar e o título */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.closeButton {
+  /* CORREÇÃO: Removemos o margin-left: auto */
+  color: #64748b;
+  transition: all 0.2s;
+  border-radius: 99px;
+  padding: 4px;
+}
+.closeButton:hover {
+  color: #0f172a;
+  background-color: #e2e8f0;
+  transform: rotate(90deg);
+}
+
+.form {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.cancelButton, .submitButton {
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.cancelButton {
+  background-color: #f1f5f9;
+  border-color: #e2e8f0;
+}
+.cancelButton:hover {
+  background-color: #e2e8f0;
+}
+.submitButton {
+  background-color: #2563eb;
+  color: white;
+}
+.submitButton:hover {
+  background-color: #1d4ed8;
+}
+.submitButton:disabled {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}

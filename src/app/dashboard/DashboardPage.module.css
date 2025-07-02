@@ -1,0 +1,265 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f7f3ef 0%, #e7d3c1 100%);
+}
+
+.panel {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(80, 60, 30, 0.10);
+  border: 1px solid #e7d3c1;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #a97c50;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #e7d3c1;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.buttonLarge {
+  font-size: 0.95rem;
+  padding: 9px 0;
+  width: 80%;
+  border-radius: 10px !important;
+  margin-bottom: 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 8px #e7d3c133;
+  border: 2px solid #e7d3c1 !important;
+  transition: background 0.2s, color 0.2s, border 0.2s, box-shadow 0.2s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonPrimary {
+  background: #a97c50 !important;
+  color: #fff !important;
+}
+
+.buttonPrimary:hover {
+  background: #7c4a03 !important;
+  color: #fff !important;
+  border-color: #a97c50 !important;
+}
+
+.buttonSecondary {
+  background: #fff !important;
+  color: #a97c50 !important;
+  border: 2px solid #a97c50 !important;
+}
+
+.buttonSecondary:hover {
+  background: #f7f3ef !important;
+  color: #7c4a03 !important;
+  border-color: #7c4a03 !important;
+}
+
+.buttonLogout {
+  background: #c0392b !important;
+  color: #fff !important;
+  border: 2px solid #c0392b !important;
+  font-size: 0.85rem;
+  padding: 6px 0;
+  border-radius: 8px !important;
+  width: 60%;
+  font-weight: 600;
+  box-shadow: 0 2px 8px #c0392b22;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buttonLogoutHover {
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.buttonLogoutHover:hover {
+  background: #a93226 !important;
+  color: #fff !important;
+  border-color: #a93226 !important;
+  box-shadow: 0 2px 8px #c0392b33;
+}
+
+.logoutArea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.content {
+  width: 100%;
+  min-height: 120px;
+  background: #f7f3ef;
+  border-radius: 12px;
+  border: 1px solid #e7d3c1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.info {
+  color: #7c4a03;
+  font-size: 1.1rem;
+}
+
+.modalTitle {
+  color: #a97c50;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.dashboardContainer {
+  min-height: 100vh;
+  display: flex;
+  background: #f7f3ef;
+}
+
+.sidebar {
+  min-height: 100vh;
+  width: 260px;
+  background: #fff;
+  border-right: 1px solid #e7d3c1;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem 1rem 1rem;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.mainPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem 2rem;
+  background: #f7f3ef;
+}
+
+.contentPanel {
+  width: 100%;
+  max-width: 600px;
+  min-height: 220px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: none;
+  border: 1px solid #e7d3c1;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #a97c50;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #e7d3c1;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    display: none;
+  }
+
+  .buttonLarge {
+    font-size: 0.9rem;
+    padding: 7px 0;
+    width: 90%;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .buttonLogout {
+    font-size: 0.8rem;
+    padding: 5px 0;
+    width: 70%;
+  }
+}
+
+.enterpriseList {
+  width: 100%;
+}
+
+.enterpriseListHeader {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.enterpriseListHeader h2 {
+  margin-bottom: 0.7rem;
+  font-size: 1.2rem;
+  color: #a97c50;
+}
+
+.enterpriseUl {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.enterpriseItem {
+  background: #f7f3ef;
+  border-radius: 10px;
+  border: 1px solid #e7d3c1;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(80, 60, 30, 0.04);
+}
+
+.buttonCancel {
+  padding: .5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttonCancel:hover {
+  background: #f0f0f0;
+}
